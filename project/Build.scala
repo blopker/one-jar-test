@@ -15,11 +15,10 @@ object ApplicationBuild extends Build {
 
   // Make standard settings and add them to Play
   def standardSettings = Seq(
-    // exportJars := true
+    exportJars := true
   ) ++ Defaults.defaultSettings
 
   val main = play.Project(appName, appVersion, appDependencies, settings = standardSettings ++ SbtOneJar.oneJarSettings).settings(
 
   )
-
 }
